@@ -4,10 +4,11 @@ function nameMenuItem(food) {
 }
 
 function createMenuItem(menuItemName, cost, meal) {
-  var menuItem = {}
-    menuItem.name = menuItemName
-    menuItem.price = cost
-    menuItem.type = meal
+  menuItem = {
+    name : menuItemName,
+    price : cost,
+    type: meal
+  }
     return menuItem
 }
 function addIngredients(food, ingredients){
@@ -20,15 +21,15 @@ function addIngredients(food, ingredients){
   return ingredients
 }
 function formatPrice(initialPrice) {
-  var formattedPrice = `$${initialPrice}`
+  formattedPrice = `$${initialPrice}`
   return formattedPrice
 }
 function decreasePrice(price) {
-  var decreasedPrice = price - (price/10)
+  decreasedPrice = price - (price/10)
   return decreasedPrice
 }
 function createRecipe(title, ingredients, menuItemType) {
-  var recipe = {
+  recipe = {
     title: title,
     ingredients: ingredients,
     type: menuItemType
