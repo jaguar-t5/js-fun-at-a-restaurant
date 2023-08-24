@@ -14,9 +14,6 @@ function refundOrder(orderNum, deliveryOrders){
       deliveryOrders.splice(i, 1);
       return deliveryOrders
     }
-    else {
-      return deliveryOrders
-    }
   }
 }
 module.exports = {
