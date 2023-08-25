@@ -18,7 +18,7 @@ function addIngredients(food, ingredients){
   }
   else {
     return ingredients
-  }
+  };
 };
 function formatPrice(initialPrice) {
   var formattedPrice = `$${initialPrice}`;

@@ -5,17 +5,17 @@ function takeOrder(order, deliveryOrders) {
   }
   else {
     return deliveryOrders
-  }
-}
+  };
+};
 
 function refundOrder(orderNum, deliveryOrders){
   for(i = 0; i < deliveryOrders.length; i++){
     if(deliveryOrders[i].orderNumber === orderNum) {
       deliveryOrders.splice(i, 1);
       return deliveryOrders
-    }
-  }
-}
+    };
+  };
+};
 
 function listItems(deliveryOrders) {
   var items = "";
@@ -25,22 +25,22 @@ function listItems(deliveryOrders) {
     }
     else {
       items += `${deliveryOrders[i].item}`;
-    }
-  }
+    };
+  };
   return items
-}
+};
 
 function searchOrder(deliveryOrders, item) {
   for(i = 0; i < deliveryOrders.length; i++) {
     if(deliveryOrders[i].item === item) {
       return true
-    }
-  }
+    };
+  };
   return false
-}
+};
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
   searchOrder
-}
+};
