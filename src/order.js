@@ -30,9 +30,12 @@ function listItems(deliveryOrders) {
   return items
 };
 
-function searchOrder(deliveryOrders, item) {
+//Initally had return false inside for loop, which stopped all iterations.
+//Tried to refactor using includes, but could not.
+//Iterates through the passed object looking for the specific food item. Returns t/f.
+function searchOrder(deliveryOrders, foodItem) {
   for(i = 0; i < deliveryOrders.length; i++) {
-    if(deliveryOrders[i].item === item) {
+    if(deliveryOrders[i].item === foodItem) {
       return true
     };
   };
